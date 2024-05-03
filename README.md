@@ -13,3 +13,71 @@ C- SIMPLE SHELL 🫥👨‍💻
 Simple Shell is a command line interpreter developed in C language that emulates the most basic features of "sh".
 hsh is a simple shell program developed in C language that emulates the basic functionality of "sh" (Bourne Shell). It allows users to execute commands located in the PATH environment variable and provides support for some built-in commands. Please note that while hsh aims to provide essential shell functionality, some advanced features found in other shells may not be supported.
 
+📓 MANUAL
+.TH HSH 1  "HSH 1 Manuel de la Simple Shell"
+
+.SH NOM
+hsh - holberton Simple Shell 
+
+.SH SYNOPSIS
+Run ./hsh [command] [argument] for interactive mode and echo "[command] [argument]" | ./hsh for non-interactive mode.
+
+.SH DESCRIPTION
+Simple Shell is a command line interpreter developed in C language that emulates the most basic features of "sh".
+hsh is a simple shell program developed in C language that emulates the basic functionality of "sh" (Bourne Shell). It allows users to execute commands located in the PATH environment variable and provides support for some built-in commands. Please note that while hsh aims to provide essential shell functionality, some advanced features found in other shells may not be supported.
+
+.SH COMPILATION
+gcc -Wall -Werror -Wextra -pedantic -std=gnu89 *.c -o hsh
+
+By using these compilation flags, the gcc command ensures that code is compiled in a strict manner, helping to identify and correct potential errors, as well as guaranteeing compliance with C language standards.
+
+
+.SH MODES
+The shell can be used in interactive or non-interactive mode. Interactive mode is the one in which the shell is typically used, the executable file is launched and we can enter commands. In non-interactive mode, you pass the command to the executable file with a pipe operator. In the "EXAMPLES" section, you can see how to use them.
+
+.SH EXAMPLES
+- Interactive Mode:
+.TP
+\r$ ./hsh
+.TP
+\r\rhsh$ ls -l
+.TP
+- Non-Interactive Mode:
+.TP
+\recho "ls -l" | ./hsh
+
+.SH SUPPORTED COMMANDS
+- ls: List directory contents
+- cd: Change the shell working directory
+- pwd: Print the current working directory
+- cat: Concatenate and display files
+- echo: Display a line of text
+- mkdir: Make directories
+- rmdir: Remove directories
+- rm: Remove files or directories
+- touch: Create an empty file or update file timestamps
+- mv: Move or rename files or directories
+- cp: Copy files or directories
+- chmod: Change file modes or Access Control Lists
+- chown: Change file owner and group
+- grep: Print lines matching a pattern
+- find: Search files and directories
+- tar: Manipulate archive files
+- gzip: Compress or decompress files
+- top: Display Linux processes
+- ps: Report a snapshot of the current processes
+- kill: Send a signal to a process
+
+INTEGRATED CONTROLS
+
+       The following built-in commands are supported:
+
+       env Displays current environment variables.
+
+       exit Exits the command interpreter.
+
+EXECUTING PROGRAMS IN THE PATH
+In short, when hsh receives a command from the user, it first checks whether the command is an embedded command. If not, it searches for the command in the directories listed in the PATH environment variable, as well as by absolute or relative path. If it doesn't find the command, it displays an error message
+
+.SH AUTHORS
+# Evrade #
