@@ -80,8 +80,6 @@ INTEGRATED CONTROLS
 EXECUTING PROGRAMS IN THE PATH
 In short, when hsh receives a command from the user, it first checks whether the command is an embedded command. If not, it searches for the command in the directories listed in the PATH environment variable, as well as by absolute or relative path. If it doesn't find the command, it displays an error message
 
-.SH AUTHORS
-# Evrade #
 
 💿 PROTOTYPES
 
@@ -166,4 +164,5 @@ write (man 2 write)
 
 gcc -Wall -Werror -Wextra -pedantic -std=gnu89 *.c -o hsh
 
-
+.SH AUTHORS
+# Evrade #
