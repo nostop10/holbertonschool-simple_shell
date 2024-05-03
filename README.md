@@ -14,7 +14,8 @@ Simple Shell is a command line interpreter developed in C language that emulates
 hsh is a simple shell program developed in C language that emulates the basic functionality of "sh" (Bourne Shell). It allows users to execute commands located in the PATH environment variable and provides support for some built-in commands. Please note that while hsh aims to provide essential shell functionality, some advanced features found in other shells may not be supported.
 
 📓 MANUAL
-.TH HSH 1  "HSH 1 Manuel de la Simple Shell"
+
+I.TH HSH 1  "HSH 1 Manuel de la Simple Shell"
 
 .SH NOM
 hsh - holberton Simple Shell 
