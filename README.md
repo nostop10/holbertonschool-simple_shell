@@ -82,3 +82,88 @@ In short, when hsh receives a command from the user, it first checks whether the
 
 .SH AUTHORS
 # Evrade #
+
+💿 PROTOTYPES
+
+shell.c
+void handle_input(char *buffer);
+int execute_builtin(char **args, char *buffer);
+void execute_external(char **args);
+
+
+shell.h
+ void process_input();
+
+memory_manager.c
+void free_tab(char **tab);
+void clean(char *temp, char **args);
+
+token.c
+char **tokenizer(char *input, char *delimiter);
+This prototype declares the tokenizer function, which takes two character pointers as input (a string and a delimiter) and returns a pointer to an array of character pointers (a list of strings).
+
+execute.c 
+int command_is_path(char *command);
+char *check_paths(char *command, char **argv);
+char *check_command(char *command, char **argv);
+
+BuiltInCommand.c
+int check_builtin(char *command, char **argv);
+void exit_func(char **argv);
+void printenv_func();
+
+setpoint
+
+Allowed editors: vim, emacs
+All the files will be compiled on Ubuntu 20.04 LTS using gcc.
+The code should use the betty style.
+Global variables are not allowed.
+No more than 5 functions per file.
+The header files should be include guarded.
+Your shell should not have any memory leaks.
+
+✅ List of allowed functions and system calls
+
+all functions from string.h
+access (man 2 access)
+chdir (man 2 chdir)
+close (man 2 close)
+closedir (man 3 closedir)
+execve (man 2 execve)
+exit (man 3 exit)
+_exit (man 2 _exit)
+fflush (man 3 fflush)
+fork (man 2 fork)
+free (man 3 free)
+getcwd (man 3 getcwd)
+getline (man 3 getline)
+getpid (man 2 getpid)
+isatty (man 3 isatty)
+kill (man 2 kill)
+malloc (man 3 malloc)
+open (man 2 open)
+opendir (man 3 opendir)
+perror (man 3 perror)
+printf (man 3 printf)
+fprintf (man 3 fprintf)
+vfprintf (man 3 vfprintf)
+sprintf (man 3 sprintf)
+putchar (man 3 putchar)
+read (man 2 read)
+readdir (man 3 readdir)
+signal (man 2 signal)
+stat (__xstat) (man 2 stat)
+lstat (__lxstat) (man 2 lstat)
+fstat (__fxstat) (man 2 fstat)
+strtok (man 3 strtok)
+wait (man 2 wait)
+waitpid (man 2 waitpid)
+wait3 (man 2 wait3)
+wait4 (man 2 wait4)
+write (man 2 write)
+
+💾 Compilation command
+
+gcc -Wall -Werror -Wextra -pedantic -std=gnu89 *.c -o hsh
+
+
